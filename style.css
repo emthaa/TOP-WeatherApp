@@ -1,0 +1,85 @@
+
+*{
+    
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(42, 40, 40);
+    color: rgb(219, 219, 219);
+    height: 100%;
+}
+
+.website{
+    
+    background-size: cover;
+    padding: 15px;
+    height: calc(100% - 30px);
+    
+}
+
+
+
+.search-bar-container{
+    display: flex;
+    justify-content: end;
+}
+
+.search-bar{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 225px;
+    padding-left: 20px;
+     
+}
+
+.search-bar::placeholder{
+    color: white;
+}
+
+.weather-data{
+    margin-left: 150px;
+    margin-top: 150px;
+    width: calc(100% - 150px);
+    height: 250px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.condition{
+    font-size: 25px;
+}
+
+.location{
+    font-size: 45px;
+}
+
+.temperature{
+    font-size: 90px;
+}
+
+.weather-data-bottom{
+    display: flex;
+}
+
+.border{
+    width: 2px;
+    height: 100px;
+    background-color: gray;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+
+.weather-data-bottom-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 22px;
+    margin-left: 25px;
+}
