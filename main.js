@@ -29,7 +29,7 @@ async function loadWeatherData(weatherData) {
         humidity.innerHTML = "Humidity: " + weatherData.current.humidity + "%";
     } catch (error) {
         const location = document.querySelector('.location');
-        location.innerHTML = error;
+        location.innerHTML = 'Error'
     }
 }
 
