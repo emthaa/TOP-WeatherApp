@@ -12,24 +12,35 @@ async function fetchWeatherData(location) {
 }
 
 async function loadWeatherData(weatherData) {
-    try {
-        const condition = document.querySelector('.condition');
+    const condition = document.querySelector('.condition');
         const location = document.querySelector('.location');
         const temperature = document.querySelector('.temperature');
         const feelsLike = document.querySelector('.feels-like');
         const wind = document.querySelector('.wind');
         const humidity = document.querySelector('.humidity');
+    try {
+        
 
         // You can directly access properties from the weatherData object
         condition.innerHTML = weatherData.current.condition.text
-        location.innerHTML = weatherData.location.name + ', ' + weatherData.location.region;
+
+        if(weatherData.location.region == ""){
+            location.innerHTML = weatherData.location.name + ', ' + weatherData.location.country;
+        }else{
+            location.innerHTML = weatherData.location.name + ', ' + weatherData.location.region;
+        }
+
         temperature.innerHTML = weatherData.current.temp_c + "°C";
         feelsLike.innerHTML = "Feels like: " + weatherData.current.feelslike_c + "°C";
         wind.innerHTML = "Wind: " + weatherData.current.wind_kph + " km/h";
         humidity.innerHTML = "Humidity: " + weatherData.current.humidity + "%";
     } catch (error) {
-        const location = document.querySelector('.location');
-        location.innerHTML = 'Error'
+        condition.innerHTML = ""
+        location.innerHTML = weatherData.error.message
+        temperature.innerHTML = "";
+        feelsLike.innerHTML = "";
+        wind.innerHTML = "";
+        humidity.innerHTML = "";
     }
 }
 

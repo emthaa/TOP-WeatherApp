@@ -54,13 +54,15 @@ html,body{
 .condition{
     font-size: 25px;
 }
-
+    
 .location{
     font-size: 45px;
 }
 
 .temperature{
     font-size: 90px;
+    border-right: 2px solid gray;
+    padding-right: 25px;
 }
 
 .weather-data-bottom{
